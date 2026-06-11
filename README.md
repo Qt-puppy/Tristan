@@ -2,7 +2,7 @@
 title: Tristan Backend
 emoji: ⚖️
 colorFrom: gray
-colorTo: slate
+colorTo: blue
 sdk: docker
 pinned: false
 ---
