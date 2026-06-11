@@ -29,7 +29,7 @@ The environment is strictly containerized. Ensure Docker is running before initi
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/your-username/tristan.git](https://github.com/your-username/tristan.git)
+git clone [[https://github.com/your-username/tristan.git]](https://github.com/Qt-puppy/Tristan.git)
 cd tristan
 
 # 2. Configure environment
