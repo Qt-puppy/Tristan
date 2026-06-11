@@ -1,3 +1,12 @@
+---
+title: Tristan Backend
+emoji: ⚖️
+colorFrom: gray
+colorTo: slate
+sdk: docker
+pinned: false
+---
+
 # Tristan
 
 ![Python](https://img.shields.io/badge/Python_3.11-14354C?style=for-the-badge&logo=python&logoColor=white)
