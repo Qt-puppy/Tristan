@@ -1,0 +1,15 @@
+# Environments
+venv/
+env/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS
+.DS_Store
+
+# Frontend is ignored here only if we want to separate it, but it has its own .gitignore
+# We will NOT ignore the frontend folder itself, just letting Next.js .gitignore handle its internals.

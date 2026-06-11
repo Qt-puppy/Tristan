@@ -1,0 +1,8 @@
+fastapi==0.111.0
+uvicorn==0.29.0
+pydantic==2.7.1
+langchain==0.2.1
+langchain-google-genai==1.0.5
+qdrant-client==1.9.1
+PyMuPDF
+python-dotenv==1.0.1
