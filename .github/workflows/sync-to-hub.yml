@@ -2,7 +2,11 @@ name: Sync to Hugging Face Hub
 
 on:
   push:
-    branches: [main] # This triggers the sync whenever you push to the 'main' branch
+    branches: [main]
+
+# 1. Shut down GitHub's Node 20 deprecation panic
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   sync:
@@ -13,8 +17,10 @@ jobs:
           fetch-depth: 0
           lfs: true
           
-      - uses: huggingface/hub-sync@v0.1.0
-        with:
-          github_repo_id: ${{ github.repository }}
-          huggingface_repo_id: kavo022/Tristan-Backend
-          hf_token: ${{ secrets.HF_TOKEN }}
+      # 2. Bypass the outdated HF plugin and use pure Git
+      - name: Raw Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git remote add hf https://kavo022:$HF_TOKEN@huggingface.co/spaces/kavo022/Tristan-Backend
+          git push hf main --force
